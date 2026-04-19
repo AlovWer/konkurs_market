@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель - BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <svg width="150" height="50" viewBox="0 0 150 50">
+                    <rect width="150" height="50" fill="var(--accent-primary)" rx="10"/>
+                    <text x="20" y="35" fill="white" font-family="Montserrat" font-weight="bold" font-size="24">BestGames</text>
+                </svg>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="index.html" class="header__menu-link">На сайт</a></li>
+                    <li><a href="#" class="header__menu-link">Админка</a></li>
+                </ul>
+
+                <div class="theme-switcher">
+                    <button id="theme-toggle" class="theme-switcher__btn">🌙</button>
+                </div>
+            </nav>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 style="margin: 40px 0 30px;">Административная панель</h1>
+
+            <div style="display: grid; grid-template-columns: 250px 1fr; gap: 30px;">
+                <!-- Боковое меню администратора -->
+                <div style="background-color: var(--bg-secondary); padding: 25px; border-radius: 15px; height: fit-content;">
+                    <nav style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="#" style="padding: 12px; background-color: var(--accent-primary); color: white; text-decoration: none; border-radius: 8px;">Добавить игру</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Управление играми</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Пользователи</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Заказы</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Статистика</a>
+                    </nav>
+                </div>
+
+                <!-- Форма добавления игры -->
+                <div style="background-color: var(--bg-secondary); padding: 30px; border-radius: 15px;">
+                    <h2 style="margin-bottom: 30px;">Добавление новой игры</h2>
+
+                    <form class="form" style="max-width: 100%; padding: 0;">
+                        <div class="form__group">
+                            <label for="game-title" class="form__label">Название игры</label>
+                            <input type="text" id="game-title" class="form__input" placeholder="Введите название игры">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="game-genre" class="form__label">Жанр</label>
+                            <select id="game-genre" class="form__input">
+                                <option>Выберите жанр</option>
+                                <option>RPG</option>
+                                <option>Action</option>
+                                <option>Стратегия</option>
+                                <option>Гонки</option>
+                                <option>Спорт</option>
+                                <option>Инди</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="game-image" class="form__label">Изображение</label>
+                            <input type="file" id="game-image" class="form__input" accept="image/*">
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 5px;">Загрузите изображение игры (JPEG, PNG, максимум 2 МБ)</p>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="game-developer" class="form__label">Компания-разработчик</label>
+                            <input type="text" id="game-developer" class="form__input" placeholder="Введите название компании">
+                        </div>
+
+                        <div class="form__group">
+                            <label for="game-description" class="form__label">Описание</label>
+                            <textarea id="game-description" class="form__input" rows="5" placeholder="Введите описание игры"></textarea>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="game-price" class="form__label">Стоимость</label>
+                            <input type="number" id="game-price" class="form__input" placeholder="999" min="0" step="1">
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%;">Добавить игру</button>
+                    </form>
+
+                    <!-- Предпросмотр загружаемого изображения (опционально) -->
+                    <div style="margin-top: 30px; display: none;" id="image-preview">
+                        <h3>Предпросмотр</h3>
+                        <img src="" alt="Preview" style="max-width: 200px; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <p class="footer__contact">Телефон: 8-800-999-55-99</p>
+                    <p class="footer__contact">Email: info@bestgames.ru</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Клиентам</h4>
+                    <ul class="footer__nav">
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Навигация</h4>
+                    <ul class="footer__nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="register.html">Регистрация</a></li>
+                        <li><a href="login.html">Авторизация</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 BestGames. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/burger.js"></script>
+    <script>
+        // Простой предпросмотр изображения
+        document.getElementById('game-image')?.addEventListener('change', function(e) {
+            const preview = document.getElementById('image-preview');
+            const img = preview.querySelector('img');
+            
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    img.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>

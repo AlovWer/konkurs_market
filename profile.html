@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - BestGames</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <svg width="150" height="50" viewBox="0 0 150 50">
+                    <rect width="150" height="50" fill="var(--accent-primary)" rx="10"/>
+                    <text x="20" y="35" fill="white" font-family="Montserrat" font-weight="bold" font-size="24">BestGames</text>
+                </svg>
+            </div>
+
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li><a href="index.html#search" class="header__menu-link">Поиск</a></li>
+                    <li><a href="catalog.html" class="header__menu-link">Каталог игр</a></li>
+                    <li><a href="profile.html" class="header__menu-link">Личный кабинет</a></li>
+                </ul>
+
+                <div class="theme-switcher">
+                    <button id="theme-toggle" class="theme-switcher__btn">🌙</button>
+                </div>
+            </nav>
+
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 style="margin: 40px 0 30px;">Личный кабинет</h1>
+
+            <div style="display: grid; grid-template-columns: 300px 1fr; gap: 30px;">
+                <!-- Боковое меню -->
+                <div style="background-color: var(--bg-secondary); padding: 25px; border-radius: 15px; height: fit-content;">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <div style="width: 100px; height: 100px; background-color: var(--accent-primary); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white;">
+                            КМ
+                        </div>
+                        <h3>кез мшышщ</h3>
+                        <p style="color: var(--text-secondary);">kez.visio@example.com</p>
+                    </div>
+
+                    <nav style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="#" style="padding: 12px; background-color: var(--accent-primary); color: white; text-decoration: none; border-radius: 8px;">Мой профиль</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">История покупок</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Настройки</a>
+                        <a href="#" style="padding: 12px; background-color: var(--bg-primary); color: var(--text-primary); text-decoration: none; border-radius: 8px;">Выйти</a>
+                    </nav>
+                </div>
+
+                <!-- Основной контент -->
+                <div>
+                    <!-- Информация о пользователе -->
+                    <section style="background-color: var(--bg-secondary); padding: 25px; border-radius: 15px; margin-bottom: 30px;">
+                        <h2 style="margin-bottom: 20px;">Информация о пользователе</h2>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                            <div>
+                                <p style="color: var(--text-secondary); margin-bottom: 5px;">Email</p>
+                                <p style="font-weight: 600;">kez.visio@example.com</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--text-secondary); margin-bottom: 5px;">Фамилия</p>
+                                <p style="font-weight: 600;">Мшыщ</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--text-secondary); margin-bottom: 5px;">Имя</p>
+                                <p style="font-weight: 600;">Кез</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--text-secondary); margin-bottom: 5px;">Дата рождения</p>
+                                <p style="font-weight: 600;">15.05.1995</p>
+                            </div>
+                            <div>
+                                <p style="color: var(--text-secondary); margin-bottom: 5px;">Номер телефона</p>
+                                <p style="font-weight: 600;">+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- История покупок -->
+                    <section style="background-color: var(--bg-secondary); padding: 25px; border-radius: 15px; margin-bottom: 30px;">
+                        <h2 style="margin-bottom: 20px;">История покупок</h2>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid var(--border-color);">
+                                        <th style="text-align: left; padding: 10px;">Дата</th>
+                                        <th style="text-align: left; padding: 10px;">Название</th>
+                                        <th style="text-align: left; padding: 10px;">Стоимость</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid var(--border-color);">
+                                        <td style="padding: 15px 10px;">15.01.2026</td>
+                                        <td style="padding: 15px 10px;">Cyberpunk 2077</td>
+                                        <td style="padding: 15px 10px;">1999 ₽</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-color);">
+                                        <td style="padding: 15px 10px;">10.01.2026</td>
+                                        <td style="padding: 15px 10px;">Elden Ring</td>
+                                        <td style="padding: 15px 10px;">2499 ₽</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-color);">
+                                        <td style="padding: 15px 10px;">05.01.2026</td>
+                                        <td style="padding: 15px 10px;">Baldur's Gate 3</td>
+                                        <td style="padding: 15px 10px;">2199 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 15px 10px;">28.12.2025</td>
+                                        <td style="padding: 15px 10px;">Hogwarts Legacy</td>
+                                        <td style="padding: 15px 10px;">1799 ₽</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Настройки профиля -->
+                    <section style="background-color: var(--bg-secondary); padding: 25px; border-radius: 15px;">
+                        <h2 style="margin-bottom: 20px;">Настройки профиля</h2>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <button class="btn">Сменить пароль</button>
+                        </div>
+
+                        <div>
+                            <h3 style="margin-bottom: 15px;">Тема оформления</h3>
+                            <div style="display: flex; gap: 15px;">
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="theme" value="dark" checked onchange="setTheme('dark')">
+                                    <span>Тёмная</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="theme" value="light" onchange="setTheme('light')">
+                                    <span>Светлая</span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h4>Контакты</h4>
+                    <p class="footer__contact">Телефон: 8-800-999-55-99</p>
+                    <p class="footer__contact">Email: info@bestgames.ru</p>
+                </div>
+                <div class="footer__column">
+                    <h4>Клиентам</h4>
+                    <ul class="footer__nav">
+                        <li><a href="#">Партнерам</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4>Навигация</h4>
+                    <ul class="footer__nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="register.html">Регистрация</a></li>
+                        <li><a href="login.html">Авторизация</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                        <li><a href="index.html#search">Поиск</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 BestGames. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+</html>
